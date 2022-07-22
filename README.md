@@ -8,12 +8,23 @@ Program dibangun dengan basis NodeJS dengan beberapa package manager, seperti `e
 git clone https://github.com/ekotwidodo/output-sandbox-to-excel.git
 ```
 
+(Tambahan) Tambahkan folder `public/files` dan `public/logs`
+
 Setelah itu, install depencency dengan perintah: `npm install`
 
 Terakhir, jalankan program dengan perintah: `npm run dev`
 
-Buka browser, masukkan URL: `http://localhost:3000`
+Buat file `.env` dan copas dari `.env.example`
+
+Buka browser, masukkan URL: `http://localhost:<PORT>`
 
 ![Tampilan](tampilan.png)
 
-Program dikembangkan oleh Eko Teguh Widodo, apabila ada masukan bisa menghubungi secara personal. 
+**INFORMASI TAMBAHAN**
+
+- Penamaan file output adalah `<judul paragraf>_<timestamp>.xlsx`
+- Menyimpan query dari output tersebut
+
+## Lain-lain
+
+Program dibangun dikembangkan oleh Eko Teguh Widodo, apabila ada masukan bisa menghubungi secara personal. 

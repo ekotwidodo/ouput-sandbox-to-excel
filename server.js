@@ -21,7 +21,9 @@ app.use(
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.use('/download', express.static(path.join(__dirname, 'public')))
+app.use('/download', express.static(path.join(__dirname, 'public/files')))
+app.use('/logs', express.static(path.join(__dirname, 'public/logs')))
+app.use('/assets', express.static(path.join(__dirname, 'public/assets')))
 
 app.use('/', indexRoute)
 
