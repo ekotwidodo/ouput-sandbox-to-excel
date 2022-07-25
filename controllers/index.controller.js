@@ -28,6 +28,11 @@ const formatJSON = (string) => {
   return formattedJSON
 }
 
+const handleSpecialCharacters = (text) => {
+  const source = typeof text === 'string' || text instanceof String ? text : ''
+  return source.replace(/[&\/\\#, +$~%.'":*?<>{}]/g, '-')
+}
+
 module.exports = {
 
     index(req, res){
@@ -61,7 +66,7 @@ module.exports = {
         })
 
         // Buat nama file
-        const filename = `${title.split(' ').join('_')}_${timestamp}`
+        const filename = handleSpecialCharacters(`${title.split(' ').join('_')}_${timestamp}`)
 
         // 1. Simpan log query ke dalam folder query
         writeQuery(query, filename)
